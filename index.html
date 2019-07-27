@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="item">
+          <pre id="one"></pre>               
+          <div class="desc">
+            01 - Whats Your Offer
+          </div>
+        </div>
+        <div class="item">
+          <pre id="two"></pre>               
+          <div class="desc">
+            02 - Housemates
+          </div>
+        </div>
+        <div class="item">
+          <pre id="three"></pre>               
+          <div class="desc">
+            03 - Add housemate
+          </div>
+        </div>
+        <div class="item">
+          <pre id="four"></pre>               
+          <div class="desc">
+            04 - Tenant Details
+          </div>
+        </div>        
+      </div>
+    </div>
+    <script>
+
+      var whatsYourOffer = {
+        name: 'WhatsYourOffer',
+        url: 'whats-your-offer',
+        pageNumber: 1,
+        mandatory: 'yes',
+        forwardsTo: 'housemates',
+        savesTo: 'Tenancy.rent',
+        contains: ['Big Input', 'rightSideBox'],
+      }
+      document.getElementById("one").innerHTML = JSON.stringify(whatsYourOffer, undefined, 2);
+
+      var housemates = {
+        name: 'Housemates',
+        url: 'housemates',
+        pageNumber: 2,
+        mandatory: 'yes',
+        forwardsTo: ['tenant-details','add-housemate'],
+        savesTo: null,
+        contains: ['AnimalScroller', 'rightSideBox'],
+      }
+      document.getElementById("two").innerHTML = JSON.stringify(housemates, undefined, 2);
+
+      var addHousemate = {
+        name: 'AddHousemate',
+        url: 'add-housemate',
+        pageNumber: '2a',
+        mandatory: 'no',
+        forwardsTo: 'tenant-details',
+        savesTo: 'Tenant.create',
+        contains: 'normalInput',
+      }
+      document.getElementById("three").innerHTML = JSON.stringify(addHousemate, undefined, 2);
+
+      var tenantDetails = {
+        name: 'TenantDetails',
+        url: 'tenant-details',
+        pageNumber: '3',
+        mandatory: 'yes',
+        forwardsTo: 'current-role',
+        savesTo: ['Tenant.first_name', 'Tenant.last_name', 'Tenant.phone', 'Tenant.email'],
+        contains: 'normalInput',
+      }
+      document.getElementById("four").innerHTML = JSON.stringify(tenantDetails, undefined, 2);
+    </script>
+  </body>
+</html>
