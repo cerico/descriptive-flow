@@ -1,11 +1,39 @@
-<!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <div class="container">
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=.|Oswald:light,normal,bold|Oswald:light,normal,bold|Oswald:light,normal,bold|Raleway:light,normal,bold|Roboto:light,normal,bold|Merriweather" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page guide</title>
+</head>
+
+<body>
+<div class="container">
+  <h1 class="title">Page Guide</h1>     
+    <main role="main">
+      <div class="box">
+        <div class="h2-holder">
+          <h2>TLDR / HOW TO USE</h2>
+        </div>
+        <div class="about">
+          <p>This guide details all pages to be built. 
+            It must include
+            <ul>
+              <li>Number</li>
+              <li>Name</li>
+              <li>Url</li>
+              <li>Components</li>
+              <li>Next step(s)</li>
+              <li>Api save point</li>
+              <li>If mandatory or conditional</li>
+            </ul>
+        </div>
+      </div>
+      <div class="no-h2-holder">
+        <h2>Components</h2>
+      </div>
       <div class="row">
         <div class="item">
           <pre id="one"></pre>               
@@ -22,17 +50,19 @@
         <div class="item">
           <pre id="three"></pre>               
           <div class="desc">
-            03 - Add housemate
+            02a - Add housemate
           </div>
         </div>
         <div class="item">
           <pre id="four"></pre>               
           <div class="desc">
-            04 - Tenant Details
+            03 - Tenant Details
           </div>
         </div>        
       </div>
     </div>
+  </main>          
+</div>
     <script>
 
       var whatsYourOffer = {
@@ -79,5 +109,5 @@
       }
       document.getElementById("four").innerHTML = JSON.stringify(tenantDetails, undefined, 2);
     </script>
-  </body>
-</html>
+</body>
+</html>

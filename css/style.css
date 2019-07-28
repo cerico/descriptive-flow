@@ -1,0 +1,105 @@
+body { 
+  font-family: Merriweather;
+  background-color: #FFF; 
+  background-color: #F9F7EE;
+  /* background-color:#F9ECE1; */
+  margin: 0;
+  padding: 0;
+  color: #30586e;
+  /* color:#484AB3; */
+}
+
+.about {
+  line-height: 1.6;
+  padding: 10px;
+}
+
+.h2-holder {
+  border-bottom: 1px solid;
+  text-align: center
+}
+
+.container { padding: 0 10% }
+.title { padding-right: 5%; font-size: 1.8em; text-align: right; margin: 1em 0 2em; }
+.pattern { background-color: #FFF; margin: 2.5em 0; overflow: hidden; border-radius: 3px; color: #333; clear: both; }
+.pattern-preview { padding: 1.5em 0.8em; }
+.pattern-details .highlight { display: block; background-color: #F9F7EE; margin: 0; padding: 1em; color: #333; font-size: 0.85em; border-bottom: 1px solid #ccc; line-height: 1.2; }
+.pattern-name {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #30586e;
+  font-weight: 400; 
+  position: relative;
+  border-radius: 3px 3px 0 0;
+}
+
+.pattern-name, .pattern-preview { padding: 0.5em 0.8em; }
+
+.pattern-preview { padding: 1.5em 0.8em; }
+  
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.item {
+  flex-basis: 32%;
+  width: 259px;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+  background: 	#F9F7EE ;
+  background: white;
+  margin-right: 1.333%;
+  margin-bottom: 2%;
+  border: 1px solid  #30587b;
+  /* border: 1px solid #484AB3; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media(max-width: 1333px) {
+  .item {
+    flex-basis: 48%;
+  }
+}
+
+@media(max-width: 815px) {
+  .item {
+    flex-basis: 100%;
+  }
+}
+
+@media(max-width: 555px) {
+  .item {
+    flex-basis: 100%;
+  }
+}
+
+pre {
+  font-family: roboto;
+  line-height: 1.6rem;
+}
+
+.desc {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+  padding: 10px;
+  background: #30587b;
+  background:#3072a4;
+  /* background:#484AB3; */
+  color: white;
+  font-family: merriweather;
+}
+
+.box {
+  width: 48%;
+  border: 1px solid;
+  padding: 0px;
+  color: white;
+  background: #3072a4;
+}
